@@ -1057,8 +1057,8 @@ export type FullQuery = {
    */
   serverSettings: ServerSettingsResponse;
   stockCounts: StockCounts;
-  stocktake: StocktakeResponse;
-  stocktakeByNumber: StocktakeResponse;
+  stocktake: StocktakeNode;
+  stocktakeByNumber: StocktakeNode;
   stocktakes: StocktakesResponse;
   store: StoreResponse;
   stores: StoresResponse;
@@ -2703,8 +2703,6 @@ export enum StocktakeNodeStatus {
   Finalised = 'FINALISED',
   New = 'NEW'
 }
-
-export type StocktakeResponse = NodeError | StocktakeNode;
 
 export enum StocktakeSortFieldInput {
   Comment = 'comment',
